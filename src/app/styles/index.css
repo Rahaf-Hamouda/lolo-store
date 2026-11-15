@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Logo-extracted palette — لؤلؤ brand colors */
+:root {
+  --brand-navy: #1b2340;
+  --brand-navy-dark: #121830;
+  --brand-gold: #c6a35b;
+  --brand-gold-light: #e7cfa0;
+  --brand-gold-dark: #a8853f;
+  --brand-pearl: #f7f3ea;
+  --brand-blush: #f2e4e8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-brand-pearl font-tajawal text-brand-navy antialiased;
+}
+
+::selection {
+  background-color: var(--brand-gold);
+  color: var(--brand-navy);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brand-pearl);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-gold);
+  border-radius: 999px;
+  border: 2px solid var(--brand-pearl);
+}
